@@ -3,11 +3,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from common.views import home_page_views
+from common.views import home_page_views, about_page_views, author_page_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_page_views)
+    path('', home_page_views),
+    path('about/', about_page_views),
+    path('author/', author_page_views),
 ]
 
 
