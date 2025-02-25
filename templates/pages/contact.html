@@ -1,8 +1,8 @@
-{% extends 'layouts/base.html' %}
-{% load static%}
+{% extends 'layouts/base.html'%}
+{% load static %}
 {% block content %}
-<!-- Inne Page Banner Area Start Here -->
-    <section class="inner-page-banner bg-common" data-bg-image="img/figure/inner-page-banner1.jpg">
+    <!-- Inne Page Banner Area Start Here -->
+    <section class="inner-page-banner bg-common" data-bg-image="{% static 'img/figure/inner-page-banner1.jpg' %}">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -90,5 +90,13 @@
         </div>
     </section>
     <!-- Contact Page Area End Here -->
+{% endblock %}
+
+{% block extra_js %}
+
+    <!-- Google Map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtmXSwv4YmAKtcZyyad9W7D4AC08z0Rb4"></script>
+    <!-- Validator js --> 
+    <script src="{% static 'js/validator.min.js' %}"></script>
 
 {% endblock %}
