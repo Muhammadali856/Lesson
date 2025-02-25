@@ -9,3 +9,8 @@ def about_page_views(request):
 def author_page_views(request):
     return render(request, template_name='pages/author.html')
 
+def contact_page_views(request):
+    return render(request, template_name='pages/contact.html')
+
+def single_author_page_views(request):
+    return render(request, template_name='pages/single_author.html')
