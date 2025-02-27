@@ -1,13 +1,12 @@
-from django.shortcuts import forms
-from .models import ContactForm
+from django import forms
+from .models import ContactModel
 
-class ContactForm(forms.ModelForm):
+class ContactPageForm(forms.ModelForm):
     class Meta:
-        model = ContactForm
+        model = ContactModel
         exclude = ['phone_number']
-
 
 class ContactAboutPageForm(forms.ModelForm):
     class Meta:
-        model = ContactForm
+        model = ContactModel
         exclude = ['subject']

@@ -8,7 +8,7 @@ from test_form.views import test_form
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('form/', test_form, name='form'),
-    path('', include('common.urls', namespace='pages')),
+    path('', include('pages.urls', namespace='pages')),
 
 ]
 
