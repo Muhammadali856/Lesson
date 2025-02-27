@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'recipies',
     'blogs',
     'products',
+    'test_form',
+    'pages',
 ]
 
 MIDDLEWARE = [
