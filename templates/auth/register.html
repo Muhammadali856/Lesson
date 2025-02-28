@@ -1,4 +1,4 @@
-{% extends 'layouts:base.html' %}
+{% extends 'layouts/base.html' %}
 {% load static %}
 {% block content %}
     <!-- Inne Page Banner Area Start Here -->
@@ -7,12 +7,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs-area">
-                        <h1>User Login Page</h1>
+                        <h1>Register</h1>
                         <ul>
                             <li>
                                 <a href="index.html">Home</a>
                             </li>
-                            <li>Login</li>
+                            <li>Register</li>
                         </ul>
                     </div>
                 </div>
@@ -27,39 +27,52 @@
                 <div class="col-lg-8">
                     <div class="login-box-layout1">
                         <div class="section-heading heading-dark">
-                            <h2 class="item-heading">LOGIN FORM</h2>
+                            <h2 class="item-heading">Register FORM</h2>
                         </div>
-                        <form class="login-form" method="POST" action="{% url 'users:login' %}">
+                        <form class="login-form" method="post" action="{% url 'users:register' %}">
                             {% csrf_token %}
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label class="mb-3">Username or Email Address</label>
-                                    <input name="email_or_username" class="main-input-box" type="text" placeholder="" />
+                                    <label class="mb-3">First Name</label>
+                                    <input name="first_name" class="main-input-box" type="text" placeholder="" />
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="mb-3">Password</label>
-                                    <input name="password" class="main-input-box" type="password" placeholder="" />
+                                    <label class="mb-3">Last_name</label>
+                                    <input name="last_name" class="main-input-box" type="text" placeholder="" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="checkbox checkbox-primary">
-                                        <input id="checkbox1" type="checkbox">
-                                        <label for="checkbox1">Remember Me</label>
-                                    </div>
+                                    <label class="mb-3">Username</label>
+                                    <input name="username" class="main-input-box" type="text" placeholder="" />
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="lost-password"><a href="#">Lost your password?</a></label>
+                                    <label class="mb-3">Email</label>
+                                    <input name="email"class="main-input-box" type="email" placeholder="" />
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="mb-3">Password</label>
+                                    <input name="password1" class="main-input-box" type="text" placeholder="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="mb-3">Confirm password</label>
+                                    <input name="password2"class="main-input-box" type="password" placeholder="" />
+                                </div>
+                            </div>
+
                             <div class="btn-area">
-                                <button class="btn-fill btn-primary" type="submit" value="Login">Login<i class="flaticon-next"></i></button>
-                                <a href="{% url 'users:register' %}">
-                                    <button class="btn-fill btn-dark" type="button" value="Login">Creat an Account<i class="flaticon-next"></i></button>
-                                </a>
-                                
+                                <button class="btn-fill btn-primary" type="submit" value="login">Register<i class="flaticon-next"></i></button>
+                                <button class="btn-fill btn-dark" type="submit" value="Login">Login to an accont<i class="flaticon-next"></i></button>
                             </div>
                         </form>
+
+
+
+
+
+
                         <label>Or Connect With Social Networks</label>
                         <div class="login-box-social">
                             <ul>
@@ -78,7 +91,7 @@
                         </div>
                         <div class="widget-about">
                             <figure class="author-figure"><img src="{% static 'img/figure/about.jpg' %}" alt="about"></figure>
-                            <figure class="author-signature"><img src="{% static 'img/figure/signature.png' %}" alt="about"></figure>
+                            <figure class="author-signature"><img src="{% static 'img/figure/signature.png' %}" alt="about"><figure>
                             <p>Fusce mauris auctor ollicituder teary iner hendrerit risusey aeenean rauctor pibus
                                 doloer.</p>
                         </div>
@@ -88,4 +101,4 @@
         </div>
     </section>
     <!-- Login Area End Here -->
-{% endblock%}
+{% endblock %}

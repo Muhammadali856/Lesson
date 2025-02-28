@@ -3,13 +3,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from test_form.views import test_form
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('form/', test_form, name='form'),
     path('', include('pages.urls', namespace='pages')),
-
+    path('users/', include('users.urls', namespace='users')),
 ]
 
 
